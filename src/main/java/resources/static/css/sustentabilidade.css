@@ -107,9 +107,25 @@ a:hover {
 }
 
 /* ----- SEÇÕES ----- */
+
 .section-title {
-  font-weight: bold;
-  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  color: #282828; /* Azul principal */
+  padding-bottom: 10px; /* espaço para a barra */
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #0d6efd;
+  border-radius: 5px;
 }
 
 .sustain-img {

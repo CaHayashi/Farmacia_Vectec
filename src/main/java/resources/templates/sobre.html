@@ -3,172 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Farmácia Sustentável</title>
+  <title>Sobre nós - Farmácia Vectec</title>
   <!-- Bootstrap & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="../static/css/sobre.css">
+  <!-- Estilos personalizados, CSS -->
+  <link rel="stylesheet" href="../static/css/index.css">
 </head>
 
 <body>
-  <!-- Navbar -->
+  <!-- Navbar (Menu) -->
   <nav class="navbar navbar-expand-lg navbar-custom shadow-sm px-4 py-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Farmácia Sustentável</a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-              aria-controls="navbarContent" aria-expanded="false" aria-label="Alternar navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
+      <a class="navbar-brand">Farmácia Vectec</a>
       <div class="collapse navbar-collapse" id="navbarContent">
-        <!-- Links principais -->
+        <!-- Links principais, navegação para as demais páginas -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="medicamentos.html">Medicamentos</a></li>
           <li class="nav-item"><a class="nav-link" href="sustentabilidade.html">Sustentabilidade</a></li>
           <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
         </ul>
-
         <!-- Dropdown usuário -->
         <ul class="navbar-nav ms-lg-3">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-               data-bs-toggle="dropdown" aria-expanded="false">
-              👤 Meu Perfil
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-              <li><a class="dropdown-item" href="meu_perfil.html">Minha Conta</a></li>
-              <li><a class="dropdown-item" href="#">Meus Pedidos</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-danger" href="#" id="btnLogout">Logout</a></li>
-            </ul>
+              <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle"></i> Perfil
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
+                <li><a class="dropdown-item" href="meu_perfil.html">Meu Perfil</a></li>
+                <li><a class="dropdown-item" href="medicamentos_instituicao.html" style="display: none;">Meus Medicamentos</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" id="btnLogout" href="#">Sair</a></li>
+              </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-<div class="container mt-5 fadeIn">
+  <!-- Conteúdo principal -->
+  <main class="container mt-3 fadeIn">
+    <!-- Seção Sobre Nós -->
+    <section class="text-center mb-3">
+      <h2 class="section-title">Sobre a Farmácia Vectec</h2>
+      <p class="lead text-muted">
+        A <span class="highlight">Plataforma de Venda e Distribuição de Medicamentos Próximos à Validade</span> tem como objetivo
+        reduzir o desperdício de remédios e ampliar o acesso da população a tratamentos de saúde a preços mais acessíveis.
+        Conectamos farmácias, distribuidoras e consumidores, permitindo que estoques próximos ao vencimento sejam ofertados
+        com descontos significativos.
+      </p>
+      <p class="text-muted">
+        Além de gerar benefícios econômicos para os estabelecimentos e usuários, nosso projeto promove o consumo responsável e sustentável,
+        alinhado aos Objetivos de Desenvolvimento Sustentável: <strong>ODS 3 – Saúde e Bem-Estar</strong> e <strong>ODS 12 – Consumo e Produção Responsáveis</strong>.
+      </p>
+    </section>
 
-  <!-- Seção Sobre Nós -->
-  <section class="text-center mb-5">
-    <h2 class="section-title">Sobre a Farmácia Sustentável</h2>
-    <p class="lead text-muted">
-      A <span class="highlight">Plataforma de Venda e Distribuição de Medicamentos Próximos à Validade</span> tem como objetivo
-      reduzir o desperdício de remédios e ampliar o acesso da população a tratamentos de saúde a preços mais acessíveis.
-      Conectamos farmácias, distribuidoras e consumidores, permitindo que estoques próximos ao vencimento sejam ofertados
-      com descontos significativos.
-    </p>
-    <p class="text-muted">
-      Além de gerar benefícios econômicos para os estabelecimentos e usuários, nosso projeto promove o consumo responsável e sustentável,
-      alinhado aos Objetivos de Desenvolvimento Sustentável: <strong>ODS 3 – Saúde e Bem-Estar</strong> e <strong>ODS 12 – Consumo e Produção Responsáveis</strong>.
-    </p>
-  </section>
+    <!-- Seção de Equipe -->
+    <section class="mb-3 text-center">
+      <h3 class="section-title text-center">Nossa Equipe</h3>
+      <div class="row g-4 justify-content-center mt-1">
+        <div class="col-12 col-sm-6 col-md-4 text-center">
+          <img src="../static/mock/edinho_perfil.jpeg" alt="Membro da equipe" class="team-img mb-3">
+          <h5>Carlos Eduardo Hayashi</h5>
+          <p class="text-muted">Desenvolvedor Full-Stack</p>
+          <a href="https://linkedin.com/in/seu-perfil" 
+            target="_blank" 
+            class="linkedin-btn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 text-center">
+          <img src="../static/mock/edinho_perfil.jpeg" alt="Membro da equipe" class="team-img mb-3">
+          <h5>Edson Luiz Cardoso Ohira</h5>
+          <p class="text-muted">Coordenador de Projetos</p>
+          <a href="https://linkedin.com/in/seu-perfil" 
+            target="_blank" 
+            class="linkedin-btn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 text-center">
+          <img src="../static/mock/edinho_perfil.jpeg" alt="Membro da equipe" class="team-img mb-3">
+          <h5>Vinicius Oliveira Picazzio</h5>
+          <p class="text-muted">UX/UI Designer</p>
+          <a href="https://linkedin.com/in/seu-perfil" 
+            target="_blank" 
+            class="linkedin-btn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+      </div>
+    </section>
 
-  <!-- Seção de Equipe -->
-  <section class="mb-5">
-    <h3 class="section-title text-center">Nossa Equipe</h3>
-    <div class="row g-4 justify-content-center">
-      <div class="col-12 col-sm-6 col-md-4 text-center">
-        <img src="../static/mock/edinho_perfil.jpeg" alt="Membro da equipe" class="team-img mb-3">
-        <h5>Maria Silva</h5>
-        <p class="text-muted">Coordenadora de Projetos</p>
+    <!-- Benefícios / Sustentabilidade -->
+    <section class="mb-3 text-center">
+      <h3 class="section-title">Sustentabilidade e Consumo Responsável</h3>
+      <div class="row g-4 justify-content-center mt-1">
+        <div class="col-12 col-md-4">
+          <div class="card-benefit">✅ Redução do desperdício de medicamentos</div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card-benefit">✅ Incentivo ao consumo consciente</div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card-benefit">✅ Acesso facilitado à saúde</div>
+        </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-4 text-center">
-        <img src="../static/mock/edinho_perfil.jpeg" alt="Membro da equipe" class="team-img mb-3">
-        <h5>João Souza</h5>
-        <p class="text-muted">Desenvolvedor Front-end</p>
+    </section>
+  </main>
+
+  <!-- Footer (Rodapé) -->
+  <footer class="mt-5">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- Sobre -->
+        <div class="col-12 col-md-4">
+          <h5>Sobre Nós</h5>
+          <p class="small text-light">
+            Plataforma de venda de medicamentos próximos à validade, promovendo economia, saúde e consumo responsável.
+          </p>
+        </div>
+
+        <!-- Links Rápidos -->
+        <div class="col-6 col-md-2">
+          <h5>Links Rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="small">Início</a></li>
+            <li><a href="sobre.html" class="small">Sobre Nós</a></li>
+            <li><a href="sustentabilidade.html" class="small">Sustentabilidade</a></li>
+            <li><a href="medicamentos.html" class="small">Medicamentos</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div class="col-6 col-md-3">
+          <h5>Contato</h5>
+          <ul class="list-unstyled small text-light">
+            <li>Email: contato@vectec.com</li>
+            <li>Telefone: +55 11 1234-5678</li>
+            <li>Endereço: Rua Maria Borba, 40 - Higienópolis, São Paulo - SP</li>
+          </ul>
+        </div>
+
+        <!-- Redes Sociais -->
+        <div class="col-12 col-md-3 text-md-end text-center">
+          <h5>Redes Sociais</h5>
+          <a href="#" class="me-2 fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="me-2 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="me-2 fs-5"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="fs-5"><i class="bi bi-linkedin"></i></a>
+        </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-4 text-center">
-        <img src="../static/mock/edinho_perfil.jpeg" alt="Membro da equipe" class="team-img mb-3">
-        <h5>Ana Pereira</h5>
-        <p class="text-muted">UX/UI Designer</p>
+
+      <hr class="border-white-50">
+
+      <div class="text-center small text-light">
+        &copy; 2025 Farmácia Vectec. Todos os direitos reservados.
       </div>
     </div>
-  </section>
-
-  <!-- Benefícios / Sustentabilidade -->
-  <section class="mb-5 text-center">
-    <h3 class="section-title">Sustentabilidade e Consumo Responsável</h3>
-    <div class="row g-4 justify-content-center mt-3">
-      <div class="col-12 col-md-4">
-        <div class="card-benefit">✅ Redução do desperdício de medicamentos</div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="card-benefit">✅ Incentivo ao consumo consciente</div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="card-benefit">✅ Acesso facilitado à saúde</div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<!-- Footer -->
-<footer class="mt-5">
-  <div class="container">
-    <div class="row">
-
-      <!-- Sobre -->
-      <div class="col-12 col-md-4 mb-4">
-        <h5 class="mb-3">Sobre Nós</h5>
-        <p class="small text-light">
-          Plataforma de venda de medicamentos próximos à validade, promovendo economia, saúde e consumo responsável.
-        </p>
-      </div>
-
-      <!-- Links Rápidos -->
-      <div class="col-6 col-md-2 mb-4">
-        <h5 class="mb-3">Links Rápidos</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="small">Início</a></li>
-          <li><a href="sobre.html" class="small">Sobre Nós</a></li>
-          <li><a href="sustentabilidade.html" class="small">Sustentabilidade</a></li>
-          <li><a href="#" class="small">Categorias</a></li>
-        </ul>
-      </div>
-
-      <!-- Contato -->
-      <div class="col-6 col-md-3 mb-4">
-        <h5 class="mb-3">Contato</h5>
-        <ul class="list-unstyled small text-light">
-          <li>Email: contato@farmaciasustentavel.com</li>
-          <li>Telefone: +55 11 1234-5678</li>
-          <li>Endereço: Rua Exemplo, 123, São Paulo - SP</li>
-        </ul>
-      </div>
-
-      <!-- Redes Sociais -->
-      <div class="col-12 col-md-3 mb-4 text-md-end">
-        <h5 class="mb-3">Redes Sociais</h5>
-        <a href="#" class="me-2 fs-5"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="me-2 fs-5"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="me-2 fs-5"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="fs-5"><i class="bi bi-linkedin"></i></a>
-      </div>
-
-    </div>
-
-    <hr class="border-white-50">
-
-    <div class="row">
-      <div class="col-12 text-center small text-light">
-        &copy; 2025 Farmácia Sustentável. Todos os direitos reservados.
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const btnLogout = document.getElementById('btnLogout');
-  btnLogout.addEventListener('click', () => {
-    window.location.href = "login.html";
-  });
-</script>
+<script src="../static/js/navbar.js"></script>
 
 </body>
 </html>

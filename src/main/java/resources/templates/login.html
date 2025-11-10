@@ -20,10 +20,19 @@
 
     <form id="loginForm" novalidate class="space-y-4">
       <!-- Definicao Usuario -->
-      <select id="tipoUsuario" class="w-full border px-3 py-2 rounded-lg">
-        <option value="consumidor">Sou Consumidor</option>
-        <option value="instituicao">Sou Instituição</option>
-      </select>
+      <div>
+        <div class="relative">
+          <select id="tipoUsuario"
+            class="w-full appearance-none border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none pr-10 transition-colors hover:border-blue-400 dark:hover:border-blue-500">
+            <option value="consumidor">Sou Consumidor</option>
+            <option value="instituicao">Sou Instituição</option>
+          </select>
+          <!-- Ícone seta -->
+          <svg class="w-4 h-4 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-400 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 8l4 4 4-4" />
+          </svg>
+        </div>
+      </div>
 
       <!-- E-mail -->
       <div>
@@ -51,12 +60,12 @@
       Não tem conta? <a href="cadastro.html" class="text-blue-600 dark:text-blue-400 hover:underline">Cadastre-se</a>
     </p>
 
-    <!-- Dark Mode Toggle -->
+    <!-- Dark Mode Toggle 
     <div class="text-center mt-4">
       <button id="toggleDark" class="px-3 py-1 border rounded-lg text-sm text-gray-700 dark:text-gray-300 border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
         Alternar Dark Mode
       </button>
-    </div>
+    </div> -->
   </div>
 
   <!-- JS -->

@@ -132,6 +132,23 @@ a:hover {
   }
 
 
+.linkedin-btn {
+  display: inline-block;
+  background-color: #0077b5;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.linkedin-btn:hover {
+  background-color: #ffffff;
+}
+
+
+
 /* ----- FOOTER ----- */
 footer {
   background: linear-gradient(180deg, var(--primary-dark), #2d3d8a);

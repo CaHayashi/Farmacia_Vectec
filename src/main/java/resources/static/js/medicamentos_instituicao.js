@@ -130,9 +130,46 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 
-  // Botão Adicionar Medicamento
-  const btnAdicionar = document.getElementById('btnAdicionar');
-  btnAdicionar.addEventListener('click', () => {
-    window.location.href = 'adicionar_medicamento.html';
+  // Modal de Adição de medicamento
+  const adicionarModal = new bootstrap.Modal(document.getElementById('adicionarModal'));
+  const btnAbrirModalAdicionar = document.getElementById('btnAbrirModalAdicionar');
+
+  // Abre o modal de adicionar medicamento
+  btnAbrirModalAdicionar.addEventListener('click', () => {
+    document.getElementById('formAdicionarMedicamento').reset();
+    adicionarModal.show();
+  });
+
+  // Submeter novo medicamento
+  document.getElementById('formAdicionarMedicamento').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const novoMedicamento = {
+      nome: document.getElementById('adicionarNome').value,
+      lote: document.getElementById('adicionarLote').value,
+      validade: document.getElementById('adicionarValidade').value,
+      preco: parseFloat(document.getElementById('adicionarPreco').value),
+      quantidade: parseInt(document.getElementById('adicionarQuantidade').value),
+      fotoUrl: document.getElementById('adicionarFotoUrl').value
+    };
+
+    try {
+      const response = await fetch(`http://localhost:8080/api/instituicao/medicamentos/${instituicaoLogada.id}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(novoMedicamento)
+      });
+
+      if (response.ok) {
+        adicionarModal.hide();
+        alert('Medicamento adicionado com sucesso!');
+        location.reload();
+      } else {
+        alert('Erro ao adicionar medicamento.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Erro de conexão com o servidor.');
+    }
   });
 });
